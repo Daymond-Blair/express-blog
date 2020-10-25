@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Testing Page
+    link(rel='stylesheet' href='/css/styles.css')
+  body
+    h1 Testing Pug Template Engine
+    
+    //- Conditionals
+    h2 Conditionals
+    if loggedIn == true
+        .card
+            h2=username
+            h3 #{fname} #{lname}
+    //- Looping
+    h2 Looping
+    ul
+        each num in [2, 4, 6, 8, 10, 12, 14]
+            li= num
+    script(src='js/main.js')

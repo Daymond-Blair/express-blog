@@ -1,0 +1,17 @@
+body{
+    background: white;
+}
+
+h1{
+    color: red;
+}
+
+header{
+    background: gray;
+    color: white;
+}
+
+.logo{
+    font-size: 2rem;
+    text-align: center;
+}
