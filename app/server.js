@@ -5,6 +5,9 @@
 const express = require('express')
 // Run express variable and store it in app variable
 const app = express()
+
+const DB = require('../database/connection.js')
+
 // Run server on port 3000
 const port = 3000
 

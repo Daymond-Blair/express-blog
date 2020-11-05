@@ -1,0 +1,14 @@
+extends ../layouts/app
+
+block seo
+    title Homepage
+
+block content
+    |
+    |
+    form
+        label Title
+            input#demo-name(type='text' name='demo-name' value='' placeholder='Name')
+        label Message
+            textarea#demo-message(name='demo-message' placeholder='Enter your message' rows='6')
+    
