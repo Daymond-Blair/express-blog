@@ -8,10 +8,16 @@ const app = express()
 
 const DB = require('../database/connection.js')
 
+// Use body-parser that i just installed
+const bodyParser = require('body-parser')
+
 // Run server on port 3000
 const port = 3000
 
 const routes = require("./routes.js")
+
+// Using Body Parser for POST request data
+app.use(bodyParser.urlencoded({extended:true}))
 
 // Routes
 app.use("/", routes)

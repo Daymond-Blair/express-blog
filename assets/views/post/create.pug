@@ -6,9 +6,13 @@ block seo
 block content
     |
     |
-    form
-        label Title
-            input#demo-name(type='text' name='demo-name' value='' placeholder='Name')
-        label Message
-            textarea#demo-message(name='demo-message' placeholder='Enter your message' rows='6')
-    
+    //- Class content (.content) may need to go here as a parent to below code
+    form(action='/post/create' method='POST')
+        label.title Title
+        input#demo-name(type='text' name='title' value='' placeholder='Name')
+        label.title Image URL
+        input#demo-name(type='text' name='image_url' value='' placeholder='Image')
+        label.title Message
+        textarea#demo-message(name='description' placeholder='Enter your message' rows='6')
+        #wrapper
+            input.submit(type='submit' value='Send Message' class='primary')

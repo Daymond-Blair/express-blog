@@ -16,15 +16,20 @@ DB.connect((error) => {
             if(error){
                 // Create Table
                 console.log('Creating Table posts')
-                DB.query(`CREATE TABLE posts(id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, title VARCHAR(60) NOT NULL, description MEDIUMTEXT NOT NULL, image_url MEDIUMTEXT NOT NULL)`), (error, results) => {
+                DB.query(`CREATE TABLE posts(
+                    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+                    title VARCHAR(60) NOT NULL, 
+                    description MEDIUMTEXT NOT NULL, 
+                    image_url MEDIUMTEXT NOT NULL)`, (error, results) => {
                     if(error){
                         console.log('ERROR WITH CREATING TABLE')
                         console.log(error)
                     }else{
                         console.log('CREATED TABLE')
                     }
-                }
+                })
             }else{
+                // Notify Table Exists
                 console.log('Table posts Already Exists')
             }
         }
