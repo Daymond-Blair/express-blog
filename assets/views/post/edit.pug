@@ -1,0 +1,19 @@
+extends ../layouts/app
+
+block seo
+    title Homepage
+
+block content
+    |
+    |
+    //- Class content (.content) may need to go here as a parent to below code
+    form(action=`/post/${id}/edit` method='POST')
+        label.title Title
+        input#demo-name(type='text' name='title' value=`${title}` placeholder='Name')
+        label.title Image URL
+        input#demo-name(type='text' name='image_url' value=`${image_url}` placeholder='Image')
+        label.title Message
+        textarea#demo-message(name='description' placeholder='Enter your message' rows='6')= description
+        #wrapper
+            a.submit(href=`/post/${id}/delete`) Delete Post
+            input.submit(type='submit' value='Send Message' class='primary')

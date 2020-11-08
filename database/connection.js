@@ -14,6 +14,7 @@ DB.connect((error) => {
         // Running Migration of Tables
         DB.query('SELECT 1 FROM posts LIMIT 1', (error, results) => {
             if(error){
+                // Attempt to query table, if it does not exist throw error and create table otherwise console log that it already exists
                 // Create Table
                 console.log('Creating Table posts')
                 DB.query(`CREATE TABLE posts(
